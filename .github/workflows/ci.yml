@@ -4,9 +4,9 @@ on:
   - push
 
 jobs:
-  ci:
-    name: Node CI
+  node-ci:
+    name: gabrielrufino/node-ci
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: gabrielrufino/node-ci@main
+      - uses: gabrielrufino/node-ci@v1
