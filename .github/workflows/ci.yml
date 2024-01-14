@@ -12,3 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: gabrielrufino/node-ci@v1
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.sha }}
+  cancel-in-progress: true
