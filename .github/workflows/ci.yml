@@ -7,13 +7,14 @@ on:
 
 permissions:
   pull-requests: write
+  contents: read
 
 jobs:
   node-ci:
     name: Node CI
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actalog/node-ci@v3
 
 concurrency:
